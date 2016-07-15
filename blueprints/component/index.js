@@ -68,7 +68,8 @@ module.exports = {
     return {
       importTemplate: importTemplate,
       contents: contents,
-      path: getPathOption(options)
+      path: getPathOption(options),
+      camelName: stringUtil.camelize(options.entity.name)
     };
   }
 };

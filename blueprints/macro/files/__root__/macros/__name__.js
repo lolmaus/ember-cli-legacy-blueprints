@@ -11,6 +11,7 @@
 // import {/*aliasMethod,*/ /*assert,*/ /*cacheFor,*/ /*copy,*/ /*guidFor*/}
 //   from  'ember-metal/utils';
 // import {default as EObject} from 'ember-object';
+// const O = EObject.create.bind(EObject);
 // import run from 'ember-runloop';
 // import {/*begin,*/ /*bind,*/ /*cancel,*/ /*debounce,*/ /*end,*/ /*join,*/
 //   /*later,*/ /*next,*/ /*once,*/ /*schedule,*/ /*scheduleOnce,*/ /*throttle*/}
@@ -21,7 +22,7 @@
 //   from 'ember-string';
 // import {/*isBlank,*/ /*isEmpty,*/ /*isNone,*/ /*isPresent,*/ /*tryInvoke,*/
 //   /*typeOf*/} from 'ember-utils';
-// import computed from 'ember-computed';
+import computed from 'ember-computed';
 // import {/*alias,*/ /*and,*/ /*bool,*/ /*collect,*/ /*deprecatingAlias,*/
 //   /*empty,*/ /*equal,*/ /*filter,*/ /*filterBy,*/ /*filterProperty,*/ /*gt,*/
 //   /*gte,*/ /*intersect,*/ /*lt,*/ /*lte,*/ /*map,*/ /*mapBy,*/ /*mapProperty,*/
@@ -33,45 +34,15 @@
 // import RSVP from 'rsvp';
 // import {task} from 'ember-concurrency';
 
-import Controller from 'ember-controller';
 
 
+export default function <%= camelizedModuleName %> () {
 
-export default Controller.extend({
+  return computed(
+    '',
+    function() {
+      return true;
+    }
+  );
 
-  // ----- Services -----
-  
-
-
-  // ----- Overridden properties -----
-
-  
-
-  // ----- Static properties -----
-
-
-
-  // ----- Computed properties -----
-
-
-
-  // ----- Overridden Methods -----
-
-
-
-  // ----- Custom Methods -----
-
-
-
-  // ----- Events and observers -----
-
-
-
-  // ----- Tasks -----
-
-
-
-  // ----- Actions -----
-  // actions: {
-  // }
-});
+}
