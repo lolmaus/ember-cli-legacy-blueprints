@@ -1,10 +1,10 @@
-var testInfo = require('ember-cli-test-info');
+var testInfo = require('ember-cli-test-info')
 
 module.exports = {
   description: 'Generates a view unit test.',
-  locals: function(options) {
+  locals: function (options) {
     return {
       friendlyTestDescription: testInfo.description(options.entity.name, 'Unit', 'View')
-    };
+    }
   },
-};
+}

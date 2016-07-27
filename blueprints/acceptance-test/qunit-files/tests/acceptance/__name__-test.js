@@ -1,12 +1,12 @@
-import { test } from 'qunit';
-import moduleForAcceptance from '<%= testFolderRoot %>/tests/helpers/module-for-acceptance';
+import {test} from 'qunit'
+import moduleForAcceptance from '<%= testFolderRoot %>/tests/helpers/module-for-acceptance'
 
-moduleForAcceptance('<%= friendlyTestName %>');
+moduleForAcceptance('<%= friendlyTestName %>')
 
-test('visiting /<%= dasherizedModuleName %>', function(assert) {
-  visit('/<%= dasherizedModuleName %>');
+test('visiting /<%= dasherizedModuleName %>', function (assert) {
+  visit('/<%= dasherizedModuleName %>')
 
-  andThen(function() {
-    assert.equal(currentURL(), '/<%= dasherizedModuleName %>');
-  });
-});
+  andThen(function () {
+    assert.equal(currentURL(), '/<%= dasherizedModuleName %>')
+  })
+})

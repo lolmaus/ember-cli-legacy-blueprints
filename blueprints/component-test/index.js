@@ -1,9 +1,9 @@
-var path          = require('path');
-var testInfo      = require('ember-cli-test-info');
-var stringUtil    = require('ember-cli-string-utils');
-var isPackageMissing = require('ember-cli-is-package-missing');
-var getPathOption = require('ember-cli-get-component-path-option');
-var useTestFrameworkDetector = require('../test-framework-detector');
+var path          = require('path')
+var testInfo      = require('ember-cli-test-info')
+var stringUtil    = require('ember-cli-string-utils')
+var isPackageMissing = require('ember-cli-is-package-missing')
+var getPathOption = require('ember-cli-get-component-path-option')
+var useTestFrameworkDetector = require('../test-framework-detector')
 
 module.exports = useTestFrameworkDetector({
   description: 'Generates a component integration or unit test.',
@@ -22,31 +22,31 @@ module.exports = useTestFrameworkDetector({
     }
   ],
 
-  fileMapTokens: function() {
+  fileMapTokens: function () {
     return {
-      __testType__: function(options) {
-        return options.locals.testType || 'integration';
+      __testType__: function (options) {
+        return options.locals.testType || 'integration'
       },
-      __path__: function(options) {
+      __path__: function (options) {
         if (options.pod) {
-          return path.join(options.podPath, options.locals.path, options.dasherizedModuleName);
+          return path.join(options.podPath, options.locals.path, options.dasherizedModuleName)
         }
-        return 'components';
+        return 'components'
       }
-    };
+    }
   },
-  locals: function(options) {
-    var dasherizedModuleName = stringUtil.dasherize(options.entity.name);
-    var componentPathName = dasherizedModuleName;
-    var testType = options.testType || 'integration';
-    var friendlyTestDescription = testInfo.description(options.entity.name, 'Integration', 'Component');
+  locals: function (options) {
+    var dasherizedModuleName = stringUtil.dasherize(options.entity.name)
+    var componentPathName = dasherizedModuleName
+    var testType = options.testType || 'integration'
+    var friendlyTestDescription = testInfo.description(options.entity.name, 'Integration', 'Component')
 
     if (options.pod && options.path && options.path !== 'components') {
-      componentPathName = [options.path, dasherizedModuleName].join('/');
+      componentPathName = [options.path, dasherizedModuleName].join('/')
     }
 
     if (options.testType === 'unit') {
-      friendlyTestDescription = testInfo.description(options.entity.name, 'Unit', 'Component');
+      friendlyTestDescription = testInfo.description(options.entity.name, 'Unit', 'Component')
     }
 
     return {
@@ -54,13 +54,13 @@ module.exports = useTestFrameworkDetector({
       testType: testType,
       componentPathName: componentPathName,
       friendlyTestDescription: friendlyTestDescription
-    };
+    }
   },
-  afterInstall: function(options) {
+  afterInstall: function (options) {
     if (!options.dryRun && options.testType === 'integration' && isPackageMissing(this, 'ember-cli-htmlbars-inline-precompile')) {
       return this.addPackagesToProject([
         { name: 'ember-cli-htmlbars-inline-precompile', target: '^0.3.1' }
-      ]);
+      ])
     }
   }
-});
+})

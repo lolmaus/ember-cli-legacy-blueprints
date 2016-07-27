@@ -1,25 +1,25 @@
-var path = require('path');
+var path = require('path')
 
-module.exports = function(blueprint) {
-  blueprint.supportsAddon = function() {
-    return false;
-  };
+module.exports = function (blueprint) {
+  blueprint.supportsAddon = function () {
+    return false
+  }
 
-  blueprint.filesPath = function() {
-    var type;
+  blueprint.filesPath = function () {
+    var type
 
-    var dependencies = this.project.dependencies();
+    var dependencies = this.project.dependencies()
     if ('ember-cli-qunit' in dependencies) {
-      type = 'qunit';
+      type = 'qunit'
     } else if ('ember-cli-mocha' in dependencies) {
-      type = 'mocha';
+      type = 'mocha'
     } else {
-      this.ui.writeLine('Couldn\'t determine test style - using QUnit');
-      type = 'qunit';
+      this.ui.writeLine('Couldn\'t determine test style - using QUnit')
+      type = 'qunit'
     }
 
-    return path.join(this.path, type + '-files');
-  };
+    return path.join(this.path, type + '-files')
+  }
 
-  return blueprint;
-};
+  return blueprint
+}
