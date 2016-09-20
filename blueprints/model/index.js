@@ -10,7 +10,7 @@ module.exports = {
     'attr:type'
   ],
 
-  locals: function (options) {
+  locals: function(options) {
     var attrs = []
     var needs = []
     var entityOptions = options.entity.options
@@ -53,7 +53,7 @@ module.exports = {
       }
     }
 
-    var needsDeduplicated = needs.filter(function (need, i) {
+    var needsDeduplicated = needs.filter(function(need, i) {
       return needs.indexOf(need) === i
     })
 
@@ -62,11 +62,11 @@ module.exports = {
     }
 
     if (shouldImportBelongsTo && shouldImportHasMany) {
-      import {belongsTo, hasMany} from \'ember-data/relationships\'')
+      importStatements.push('import { belongsTo, hasMany } from \'ember-data/relationships\'')
     } else if (shouldImportBelongsTo) {
-      import {belongsTo} from \'ember-data/relationships\'')
+      importStatements.push('import { belongsTo } from \'ember-data/relationships\'')
     } else if (shouldImportHasMany) {
-      import {hasMany} from \'ember-data/relationships\'')
+      importStatements.push('import { hasMany } from \'ember-data/relationships\'')
     }
 
     importStatements = importStatements.join(EOL)
@@ -81,7 +81,7 @@ module.exports = {
   }
 }
 
-function dsAttr (name, type) {
+function dsAttr(name, type) {
   switch (type) {
   case 'belongs-to':
     return 'belongsTo(\'' + name + '\')'
