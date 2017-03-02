@@ -8,8 +8,9 @@ moduleForComponent('<%= componentPathName %>', '<%= friendlyTestDescription %>',
 })
 
 test('it renders', function (assert) {
-  <% if (testType === 'integration' ) { %>// Set any properties with this.set('myProperty', 'value')
-  // Handle any actions with this.on('myAction', function (val) { ... })
+<% if (testType === 'integration' ) { %>
+  // Set any properties with this.set('myProperty', 'value');
+  // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{<%= componentPathName %>}}`)
 
