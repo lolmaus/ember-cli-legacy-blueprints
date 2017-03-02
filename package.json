@@ -54,7 +54,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "before": [
+    "after": [
       "ember-source",
       "ember-data"
     ]
