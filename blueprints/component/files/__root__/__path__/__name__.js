@@ -14,8 +14,8 @@ export default Component.extend({
 
 
   // ----- Overridden properties -----
-  classNames: ['<%= camelName %>'],
-  <%= contents %>
+  classNames : ['<%= camelName %>'],
+<%= contents %>
 
 
   // ----- Properties -----

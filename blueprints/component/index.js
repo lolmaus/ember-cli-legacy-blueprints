@@ -69,6 +69,7 @@ module.exports = {
       importTemplate : importTemplate,
       contents       : contents,
       path           : getPathOption(options),
+      camelName      : stringUtil.camelize(options.entity.name),
     }
   },
 }
