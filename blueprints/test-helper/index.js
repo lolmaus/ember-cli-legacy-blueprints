@@ -1,3 +1,3 @@
 module.exports = {
-  description: 'Generates a test helper.'
-};
+  description : 'Generates a test helper.',
+}

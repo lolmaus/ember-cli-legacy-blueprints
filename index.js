@@ -1,5 +1,5 @@
-'use strict';
+'use strict'
 
 module.exports = {
-  name: 'ember-cli-legacy-blueprints'
-};
+  name : 'ember-cli-lolmaus-blueprints',
+}

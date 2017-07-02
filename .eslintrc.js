@@ -1,70 +1,39 @@
 module.exports = {
   root: true,
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2017,
+    sourceType: 'module'
   },
-  extends: 'eslint:recommended',
+  extends: [
+    "eslint:recommended",
+    "standard"
+  ],
   env: {
-    browser: false,
-    node: true,
-  },
-  globals: {
+    browser: true
   },
   rules: {
-    /*** Possible Errors ***/
-
-    'comma-dangle': 0,
-    'no-cond-assign': [2, 'except-parens'],
-    'no-console': 0,
-    'no-debugger': 0,
-    'no-empty': 2,
-
-    /*** Best Practices ***/
-
-    'curly': 2,
-    'eqeqeq': 2,
-    'guard-for-in': 0,
-    'no-caller': 2,
-    'no-eq-null': 2,
-    'no-eval': 2,
-    'no-new': 0,
-    'no-unused-expressions': [2, {
-      allowShortCircuit: true,
-      allowTernary: true,
-    }],
-    'wrap-iife': 0,
-    'yoda': 2,
-
-    /*** Strict Mode ***/
-
-    'strict': [2, 'global'],
-
-    /*** Variables ***/
-
-    'no-undef': 2,
-    'no-unused-vars': 2,
-    'no-use-before-define': [2, 'nofunc'],
-
-    /*** Stylistic Issues ***/
-
-    'camelcase': 2,
-    'eol-last': 2,
-    'indent': [0, 2, {
-      'SwitchCase': 1,
-      'VariableDeclarator': { 'var': 2, 'let': 2, 'const': 3 }
-    }],
-    'keyword-spacing': 0,
-    'linebreak-style': [2, 'unix'],
-    'new-cap': [2, {
-      properties: false,
-    }],
-    'no-plusplus': 0,
-    'no-trailing-spaces': 2,
-    'no-unneeded-ternary': 2,
-    'space-before-blocks': 2,
-    'space-in-parens': 2,
-    'space-infix-ops': 2,
-    'space-unary-ops': 2,
-    'quotes': [2, 'single'],
+    "comma-dangle": ["error", "always-multiline"],
+    "spaced-comment": "off",
+    "no-multiple-empty-lines": "off",
+    "generator-star-spacing": "off",
+    "no-sequences": "off",
+    "key-spacing": ["error", { beforeColon: true, afterColon: true, align: "colon" }],
+    "no-multi-spaces": "off",
+    "func-call-spacing": "off",
+    "no-console": "off",
+    "quotes": "off",
+    "camelcase": "off",
+    "padded-blocks": "off",
+    "standard/object-curly-even-spacing": "off",
+    "operator-linebreak": "off",
+    "no-return-assign": "off",
+    "new-cap": "off",
+    "arrow-parens": "off",
+    "no-template-curly-in-string": "off",
+    "no-whitespace-before-property": "off",
   },
-};
+
+  "globals": {
+    // "showdown": false,
+  }
+}

@@ -1,3 +1,3 @@
 module.exports = {
-  description: 'Generates a simple utility module/function.'
-};
+  description : 'Generates a simple utility module/function.',
+}

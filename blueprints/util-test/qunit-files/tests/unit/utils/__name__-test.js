@@ -1,10 +1,10 @@
-import <%= camelizedModuleName %> from '<%= dasherizedModulePrefix %>/utils/<%= dasherizedModuleName %>';
-import { module, test } from 'qunit';
+import <%= camelizedModuleName %> from '<%= dasherizedModulePrefix %>/utils/<%= dasherizedModuleName %>'
+import { module, test } from 'qunit'
 
-module('<%= friendlyTestName %>');
+module('<%= friendlyTestName %>')
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  let result = <%= camelizedModuleName %>();
-  assert.ok(result);
-});
+  let result = <%= camelizedModuleName %>()
+  assert.ok(result)
+})

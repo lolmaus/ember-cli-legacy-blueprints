@@ -1,3 +1,3 @@
 module.exports = {
-  description: 'Generates a controller.'
-};
+  description : 'Generates a controller.',
+}

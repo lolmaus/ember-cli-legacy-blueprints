@@ -1,4 +1,36 @@
-import Ember from 'ember';
+import Service from 'ember-service'
 
-export default Ember.Service.extend({
-});
+
+
+export default Service.extend({
+
+  // ----- Services -----
+
+
+
+  // ----- Overridden properties -----
+
+
+
+  // ----- Static properties -----
+
+
+
+  // ----- Computed properties -----
+
+
+
+  // ----- Overridden Methods -----
+
+
+
+  // ----- Custom Methods -----
+
+
+
+  // ----- Events and observers -----
+
+
+
+  // ----- Tasks -----
+})
