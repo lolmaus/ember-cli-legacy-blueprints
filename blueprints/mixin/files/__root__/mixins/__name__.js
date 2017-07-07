@@ -1,4 +1,11 @@
+// ----- Ember modules -----
 import Mixin from 'ember-metal/mixin'
+
+// ----- Ember addons -----
+
+// ----- Third-party libraries -----
+
+// ----- Own modules -----
 
 
 

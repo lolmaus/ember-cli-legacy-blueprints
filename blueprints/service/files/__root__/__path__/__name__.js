@@ -1,4 +1,11 @@
+// ----- Ember modules -----
 import Service from 'ember-service'
+
+// ----- Ember addons -----
+
+// ----- Third-party libraries -----
+
+// ----- Own modules -----
 
 
 

@@ -1,4 +1,13 @@
+// ----- Ember modules -----
 import Controller from 'ember-controller'
+
+// ----- Ember addons -----
+
+// ----- Third-party libraries -----
+
+// ----- Own modules -----
+
+
 
 export default Controller.extend({
 

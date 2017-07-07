@@ -1,5 +1,12 @@
+// ----- Ember modules -----
 import Component from 'ember-component'
 <%= importTemplate %>
+
+// ----- Ember addons -----
+
+// ----- Third-party libraries -----
+
+// ----- Own modules -----
 
 
 

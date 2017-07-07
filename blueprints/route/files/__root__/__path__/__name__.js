@@ -1,4 +1,12 @@
+// ----- Ember modules -----
 import Route from 'ember-route'
+
+// ----- Ember addons -----
+
+// ----- Third-party libraries -----
+// import RSVP from 'rsvp'
+
+// ----- Own modules -----
 
 
 
