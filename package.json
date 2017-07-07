@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-lolmaus-blueprints",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "A version of Ember blueprints customized to my personal needs.",
   "files": [
     "index.js",
